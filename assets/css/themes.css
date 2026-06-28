@@ -1,0 +1,83 @@
+/* ===========================================================
+   THEMES — two style proposals, switchable live.
+   1) data-theme="editorial"  → Editorial minimalist
+   2) data-theme="literary"   → Literary elegant
+   Only design tokens & a few accents change; structure is shared.
+   =========================================================== */
+
+/* ---------- Proposal 1: Editorial minimalist ---------- */
+:root,
+[data-theme="editorial"] {
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --display-weight: 700;
+  --quote-weight: 600;
+  --quote-style: normal;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f3;
+  --color-card: #ffffff;
+  --color-ink: #141414;
+  --color-muted: #6b6b6b;
+  --color-line: #e4e4e0;
+  --color-accent: #e0452f;        /* warm editorial red */
+  --color-on-accent: #ffffff;
+  --color-placeholder: #efeeec;
+
+  --header-h: 68px;
+  --card-radius: 12px;
+  --media-radius: 14px;
+}
+
+/* ---------- Proposal 2: Literary elegant ---------- */
+[data-theme="literary"] {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "EB Garamond", Georgia, serif;
+  --display-weight: 600;
+  --quote-weight: 500;
+  --quote-style: italic;
+
+  --color-bg: #f7f3ec;            /* warm paper */
+  --color-bg-alt: #efe8dc;
+  --color-card: #fffdf9;
+  --color-ink: #2b2520;           /* ink brown */
+  --color-muted: #7a6f62;
+  --color-line: #ddd2c1;
+  --color-accent: #8a5a2b;        /* deep amber/brandy */
+  --color-on-accent: #fbf6ee;
+  --color-placeholder: #ece3d3;
+
+  --header-h: 74px;
+  --card-radius: 6px;
+  --media-radius: 6px;
+
+  font-size: 18px; /* serif reads a touch larger */
+}
+
+/* Literary refinements — give it a distinct, book-like feel */
+[data-theme="literary"] body { line-height: 1.7; }
+[data-theme="literary"] .hero-title,
+[data-theme="literary"] .section-title { letter-spacing: 0; }
+[data-theme="literary"] .brand-mark { border-radius: 0; border-width: 1px; }
+[data-theme="literary"] .eyebrow,
+[data-theme="literary"] .section-kicker,
+[data-theme="literary"] .strip-label { font-family: var(--font-body); font-style: italic; text-transform: none; letter-spacing: .04em; font-size: 14px; }
+[data-theme="literary"] .tag { font-family: var(--font-body); }
+[data-theme="literary"] .btn { border-radius: 2px; }
+[data-theme="literary"] .nav-cta,
+[data-theme="literary"] .ctrl[aria-pressed="true"] { border-radius: 2px; }
+[data-theme="literary"] .controls { border-radius: 4px; }
+[data-theme="literary"] .contact-email { font-style: italic; }
+[data-theme="literary"] .section-head.center .section-title::after {
+  content: "";
+  display: block;
+  width: 54px; height: 2px;
+  background: var(--color-accent);
+  margin: 18px auto 0;
+}
+
+/* Editorial accent: tighten the grotesk display */
+[data-theme="editorial"] .hero-title,
+[data-theme="editorial"] .section-title { letter-spacing: -.025em; }
+[data-theme="editorial"] .eyebrow,
+[data-theme="editorial"] .section-kicker { font-family: var(--font-body); }

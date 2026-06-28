@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="editorial">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manuel Gerardo Sánchez — Periodista gastronómico · Escritor · PR</title>
+  <meta name="description" content="Manuel Gerardo Sánchez — periodista gastronómico, escritor y PR. Crónica, crítica y comunicación para restaurantes y marcas del mundo de la gastronomía." />
+  <meta property="og:title" content="Manuel Gerardo Sánchez" />
+  <meta property="og:description" content="Periodista gastronómico · Escritor · PR" />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/themes.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%9C%92%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Floating controls: language + style proposal switcher -->
+  <div class="controls" role="region" aria-label="Site preferences">
+    <div class="control-group" role="group" aria-label="Language">
+      <button class="ctrl" data-lang="es" aria-pressed="true">ES</button>
+      <button class="ctrl" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <div class="control-group" role="group" aria-label="Style proposal">
+      <button class="ctrl" data-theme-btn="editorial" aria-pressed="true" data-i18n="ui.editorial">Editorial</button>
+      <button class="ctrl" data-theme-btn="literary" aria-pressed="false" data-i18n="ui.literary">Literario</button>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">
+        <span class="brand-mark">MGS</span>
+        <span class="brand-name">Manuel Gerardo Sánchez</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#journalism" data-i18n="nav.journalism">Periodismo</a>
+        <a href="#books" data-i18n="nav.books">Libros</a>
+        <a href="#services" data-i18n="nav.services">PR &amp; Marcas</a>
+        <a href="#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow" data-i18n="hero.eyebrow"></p>
+        <h1 class="hero-title" data-i18n="hero.title"></h1>
+        <p class="hero-lede" data-i18n="hero.lede"></p>
+        <div class="hero-actions">
+          <a href="#journalism" class="btn btn-primary" data-i18n="hero.ctaPrimary"></a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaSecondary"></a>
+        </div>
+      </div>
+      <div class="hero-portrait placeholder" data-ph="portrait" aria-hidden="true"></div>
+    </section>
+
+    <!-- PUBLICATIONS STRIP -->
+    <section class="strip" aria-label="Publications">
+      <div class="wrap">
+        <p class="strip-label" data-i18n="strip.label"></p>
+        <ul class="strip-logos" id="publications"></ul>
+      </div>
+    </section>
+
+    <!-- JOURNALISM (lead section) -->
+    <section id="journalism" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="journalism.kicker"></p>
+          <h2 class="section-title" data-i18n="journalism.title"></h2>
+          <p class="section-intro" data-i18n="journalism.intro"></p>
+        </div>
+        <div class="cards cards-articles" id="articles"></div>
+      </div>
+    </section>
+
+    <!-- BOOKS -->
+    <section id="books" class="section section-alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="books.kicker"></p>
+          <h2 class="section-title" data-i18n="books.title"></h2>
+          <p class="section-intro" data-i18n="books.intro"></p>
+        </div>
+        <div class="cards cards-books" id="books-list"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="services.kicker"></p>
+          <h2 class="section-title" data-i18n="services.title"></h2>
+          <p class="section-intro" data-i18n="services.intro"></p>
+        </div>
+        <div class="cards cards-services" id="services-list"></div>
+        <ul class="client-logos" id="clients" aria-label="Selected clients"></ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="wrap about-grid">
+        <div class="about-portrait placeholder" data-ph="about" aria-hidden="true"></div>
+        <div class="about-body">
+          <p class="section-kicker" data-i18n="about.kicker"></p>
+          <h2 class="section-title" data-i18n="about.title"></h2>
+          <div class="about-text" id="about-text"></div>
+          <div class="awards">
+            <h3 data-i18n="about.awardsTitle"></h3>
+            <ul id="awards-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section testimonials">
+      <div class="wrap">
+        <div class="section-head center">
+          <p class="section-kicker" data-i18n="testimonials.kicker"></p>
+          <h2 class="section-title" data-i18n="testimonials.title"></h2>
+        </div>
+        <div class="quotes" id="testimonials"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt contact">
+      <div class="wrap contact-grid">
+        <div class="contact-body">
+          <p class="section-kicker" data-i18n="contact.kicker"></p>
+          <h2 class="section-title" data-i18n="contact.title"></h2>
+          <p class="section-intro" data-i18n="contact.intro"></p>
+          <a class="contact-email" id="contact-email" href="mailto:hola@manuelgerardosanchez.com">hola@manuelgerardosanchez.com</a>
+          <ul class="social" id="social"></ul>
+        </div>
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+          <label>
+            <span data-i18n="contact.formName"></span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span data-i18n="contact.formEmail"></span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span data-i18n="contact.formMessage"></span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit"></button>
+          <p class="form-note" data-i18n="contact.formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="brand-name">Manuel Gerardo Sánchez</span>
+      <span class="footer-meta" data-i18n="footer.meta"></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
