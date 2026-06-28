@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
+# Manual-only for now: GitHub Pages can't publish a PRIVATE repo on the free
+# plan, so auto-running on push would just fail. Make the repo public, then
+# either run this from the Actions tab ("Run workflow") or switch the trigger
+# back to `push`.
 on:
-  push:
-    branches: ["claude/writer-portfolio-website-zq6mzu"]
   workflow_dispatch:
 
 permissions:
