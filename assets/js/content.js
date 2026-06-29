@@ -134,11 +134,11 @@ window.SITE_CONTENT = {
       href: "https://www.zendalibros.com/el-llamado-del-diablo/"
     },
     {
-      ph: "article-6", img: "assets/img/article-homofobia.jpg",
+      ph: "article-6", img: "assets/img/article-matar-a-los-hijos.jpg",
       tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
-      title: { es: "Homofobia, hasta después de la muerte", ca: "Homofòbia, fins després de la mort" },
-      excerpt: { es: "Sobre un estigma que persiste más allá de la vida.", ca: "Sobre un estigma que persisteix més enllà de la vida." },
-      href: "https://www.zendalibros.com/homofobia-hasta-despues-de-la-muerte/"
+      title: { es: "Matar a los hijos", ca: "Matar a los hijos" },
+      excerpt: { es: "Una columna sobre el más perturbador de los tabúes.", ca: "Una columna sobre el més pertorbador dels tabús." },
+      href: "https://www.zendalibros.com/matar-a-los-hijos/"
     }
   ],
 
