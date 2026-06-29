@@ -92,7 +92,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
   margin-inline: auto;
   padding: clamp(52px, 9vw, 132px) 0 clamp(44px, 7vw, 96px);
 }
-.hero-inner { max-width: 40ch; }
+.hero-inner { max-width: 42ch; margin-inline: 0; justify-self: start; }
 .eyebrow { margin: 0 0 24px; font-weight: 500; }
 .hero-title { font-size: clamp(2.6rem, 6vw, 4.6rem); margin-bottom: 26px; }
 .hero-lede { font-size: clamp(1.1rem, 1.7vw, 1.32rem); color: var(--color-muted); margin: 0 0 36px; }
@@ -172,7 +172,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
 .card-book { background: transparent; border: 0; text-align: center; }
 .card-book:hover { transform: translateY(-5px); box-shadow: none; }
 .card-book .card-body { padding: 18px 4px 0; }
-.book-cover { aspect-ratio: 2 / 3; border-radius: var(--card-radius); box-shadow: 0 14px 32px rgba(40,30,10,.20); transition: box-shadow .2s; }
+.book-cover { aspect-ratio: 2 / 3; width: 100%; object-fit: cover; border-radius: var(--card-radius); box-shadow: 0 14px 32px rgba(40,30,10,.20); transition: box-shadow .2s; }
 .card-book:hover .book-cover { box-shadow: 0 20px 42px rgba(40,30,10,.30); }
 .card-meta-line { font-size: .92rem; color: var(--color-muted); font-style: italic; margin: 8px 0 0; }
 .card-blurb { font-size: .96rem; color: var(--color-muted); margin: 10px 0 0; line-height: 1.5; }

@@ -56,18 +56,18 @@ Real text is filled in where it could be sourced (bio, the four books + synopses
 awards, the verified *The Objective* article, LinkedIn/Facebook). The items below
 still need him.
 
-### Images — ALL are placeholders (and must be supplied)
-The build environment can't reach his sites to pull images, so nothing was
-imported. Provide the actual files (drop them in `assets/img/` and we wire them
-up) **or** paste public image URLs and we'll link them:
-- [ ] **Portrait** — hero photo (vertical, ~4:5) and an About photo.
-- [ ] **Book covers** — cover image for each of the 4 books (~2:3).
-- [ ] **Article thumbnails** — 1 image per journalism piece (~3:2).
+### Images
+- [x] **Book covers** — all 4 added in `assets/img/` and wired up.
+- [ ] **Portrait** — hero photo (vertical, ~4:5) and an About photo (still placeholder).
+- [ ] **Article thumbnails** — 1 image per journalism piece (~3:2), still placeholder.
 - [ ] **Client / publication logos** — optional, if we want logos instead of text.
 
+To add the remaining images: drop the files in `assets/img/` and tell me, or
+paste public URLs. (The build environment can't reach his sites to fetch them.)
+
 ### Text & data
-- [ ] **Journalism** — the real card #1 (*The Objective*) is in; replace the 3
-      `[Ejemplo]/[Sample]` cards with his chosen pieces (title, outlet, summary, **link**).
+- [ ] **Journalism** — 6 real pieces are in (1 *The Objective* gastronomy feature +
+      5 *Zenda* columns). Confirm these are the ones he wants and that authorship is right.
 - [ ] **Clients** — restaurants / brands he's worked with (names + permission).
 - [ ] **Testimonials** — 2–3 real quotes with name + business (currently placeholder).
 - [ ] **Services** — confirm the 4 areas / wording; add packages or pricing if wanted.

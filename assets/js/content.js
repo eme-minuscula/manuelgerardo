@@ -26,8 +26,8 @@ window.SITE_CONTENT = {
     "services.intro": "Acompaño a restaurantes, bodegas y marcas de alimentación a definir su relato y llevarlo a los medios: estrategia, contenidos y relación con prensa.",
 
     "journalism.kicker": "Periodismo",
-    "journalism.title": "Crónica, crítica y reportaje gastronómico",
-    "journalism.intro": "Una selección de piezas sobre cocina, producto, cultura del vino y las personas que mueven la gastronomía.",
+    "journalism.title": "Crónica, crítica y reportaje",
+    "journalism.intro": "Una selección de piezas sobre gastronomía, cultura y literatura, y las personas que las mueven.",
 
     "books.kicker": "Libros",
     "books.title": "Obra literaria",
@@ -67,8 +67,8 @@ window.SITE_CONTENT = {
     "services.intro": "Acompanyo restaurants, cellers i marques d'alimentació a definir el seu relat i portar-lo als mitjans: estratègia, continguts i relació amb la premsa.",
 
     "journalism.kicker": "Periodisme",
-    "journalism.title": "Crònica, crítica i reportatge gastronòmic",
-    "journalism.intro": "Una selecció de peces sobre cuina, producte, cultura del vi i les persones que mouen la gastronomia.",
+    "journalism.title": "Crònica, crítica i reportatge",
+    "journalism.intro": "Una selecció de peces sobre gastronomia, cultura i literatura, i les persones que les mouen.",
 
     "books.kicker": "Llibres",
     "books.title": "Obra literària",
@@ -108,8 +108,8 @@ window.SITE_CONTENT = {
     "services.intro": "I help restaurants, wineries and food brands define their story and take it to the media: strategy, content and press relations.",
 
     "journalism.kicker": "Journalism",
-    "journalism.title": "Food features, criticism and reporting",
-    "journalism.intro": "A selection of pieces on cooking, produce, wine culture and the people who move gastronomy forward.",
+    "journalism.title": "Features, criticism and reporting",
+    "journalism.intro": "A selection of pieces on food, culture and literature — and the people who move them.",
 
     "books.kicker": "Books",
     "books.title": "Literary work",
@@ -133,11 +133,12 @@ window.SITE_CONTENT = {
 
   publications: ["Cocina y Vino", "Exceso", "Complot", "El Estímulo", "Clímax", "The Objective", "Zenda"],
 
-  // First card is a verified, published gastronomy piece (real link). The rest
-  // are clearly-marked examples until Manuel sends his selected articles.
+  // Real, published pieces: one gastronomy feature (The Objective) plus five
+  // columns from his Zenda author page. Article thumbnails are still
+  // placeholders until Manuel sends images.
   articles: [
     {
-      ph: "article-1", tag: { es: "Crónica", ca: "Crònica", en: "Feature" }, outlet: "The Objective",
+      ph: "article-1", tag: { es: "Gastronomía", ca: "Gastronomia", en: "Food" }, outlet: "The Objective",
       title: {
         es: "Tribulaciones de un gourmet español en China",
         ca: "Tribulacions d'un gourmet espanyol a la Xina",
@@ -151,41 +152,36 @@ window.SITE_CONTENT = {
       href: "https://theobjective.com/gastronomia/2024-09-29/tribulaciones-de-un-gourmet-espanol-en-china/"
     },
     {
-      ph: "article-2", tag: { es: "Ejemplo", ca: "Exemple", en: "Sample" }, outlet: "Cocina y Vino",
-      title: { es: "[Ejemplo] Crónica de un producto de temporada", ca: "[Exemple] Crònica d'un producte de temporada", en: "[Sample] A seasonal produce feature" },
-      excerpt: {
-        es: "Marcador para una de tus piezas. Lo sustituimos por el artículo y el enlace reales.",
-        ca: "Marcador per a una de les teves peces. El substituïm per l'article i l'enllaç reals.",
-        en: "Placeholder for one of your pieces. We'll swap it for the real article and link."
-      },
-      href: "#"
+      ph: "article-2", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "El llamado del diablo", ca: "El llamado del diablo", en: "El llamado del diablo" },
+      href: "https://www.zendalibros.com/el-llamado-del-diablo/"
     },
     {
-      ph: "article-3", tag: { es: "Ejemplo", ca: "Exemple", en: "Sample" }, outlet: "Exceso",
-      title: { es: "[Ejemplo] Perfil de un cocinero", ca: "[Exemple] Perfil d'un cuiner", en: "[Sample] Profile of a chef" },
-      excerpt: {
-        es: "Marcador para una de tus piezas. Lo sustituimos por el artículo y el enlace reales.",
-        ca: "Marcador per a una de les teves peces. El substituïm per l'article i l'enllaç reals.",
-        en: "Placeholder for one of your pieces. We'll swap it for the real article and link."
-      },
-      href: "#"
+      ph: "article-3", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "Matar a los hijos", ca: "Matar a los hijos", en: "Matar a los hijos" },
+      href: "https://www.zendalibros.com/matar-a-los-hijos/"
     },
     {
-      ph: "article-4", tag: { es: "Ejemplo", ca: "Exemple", en: "Sample" }, outlet: "Complot",
-      title: { es: "[Ejemplo] La nueva cultura del vino", ca: "[Exemple] La nova cultura del vi", en: "[Sample] The new wine culture" },
-      excerpt: {
-        es: "Marcador para una de tus piezas. Lo sustituimos por el artículo y el enlace reales.",
-        ca: "Marcador per a una de les teves peces. El substituïm per l'article i l'enllaç reals.",
-        en: "Placeholder for one of your pieces. We'll swap it for the real article and link."
-      },
-      href: "#"
+      ph: "article-4", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "Homofobia, hasta después de la muerte", ca: "Homofobia, hasta después de la muerte", en: "Homofobia, hasta después de la muerte" },
+      href: "https://www.zendalibros.com/homofobia-hasta-despues-de-la-muerte/"
+    },
+    {
+      ph: "article-5", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "Sade y la primera orgía", ca: "Sade y la primera orgía", en: "Sade y la primera orgía" },
+      href: "https://www.zendalibros.com/sade-y-la-primera-orgia/"
+    },
+    {
+      ph: "article-6", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "Cuando violan a un hombre", ca: "Cuando violan a un hombre", en: "Cuando violan a un hombre" },
+      href: "https://www.zendalibros.com/cuando-violan-a-un-hombre/"
     }
   ],
 
   // Real books with sourced synopses.
   books: [
     {
-      ph: "book-1", title: "En verano duele más", meta: { es: "Novela · Egales, 2023", ca: "Novel·la · Egales, 2023", en: "Novel · Egales, 2023" },
+      ph: "book-1", title: "En verano duele más", cover: "assets/img/en-verano-duele-mas.jpg", meta: { es: "Novela · Egales, 2023", ca: "Novel·la · Egales, 2023", en: "Novel · Egales, 2023" },
       blurb: {
         es: "Camille regresa a Punta de Mata, en el oriente venezolano, cuando su padre agoniza. Una novela sobre la familia, el deseo, la culpa y la memoria.",
         ca: "En Camille torna a Punta de Mata, a l'orient veneçolà, quan el seu pare agonitza. Una novel·la sobre la família, el desig, la culpa i la memòria.",
@@ -193,7 +189,7 @@ window.SITE_CONTENT = {
       }
     },
     {
-      ph: "book-2", title: "El revuelo de los insectos", meta: { es: "Novela · Egales, 2020", ca: "Novel·la · Egales, 2020", en: "Novel · Egales, 2020" },
+      ph: "book-2", title: "El revuelo de los insectos", cover: "assets/img/el-revuelo-de-los-insectos.jpg", meta: { es: "Novela · Egales, 2020", ca: "Novel·la · Egales, 2020", en: "Novel · Egales, 2020" },
       blurb: {
         es: "Dos milicianos desertores —y amantes— huyen por la selva de una tiranía imaginaria. Una fábula orwelliana sobre el poder, la persecución y el deseo.",
         ca: "Dos milicians desertors —i amants— fugen per la selva d'una tirania imaginària. Una faula orwelliana sobre el poder, la persecució i el desig.",
@@ -201,7 +197,7 @@ window.SITE_CONTENT = {
       }
     },
     {
-      ph: "book-3", title: "Sangre que lava", meta: { es: "Relatos, 2016", ca: "Relats, 2016", en: "Stories, 2016" },
+      ph: "book-3", title: "Sangre que lava", cover: "assets/img/sangre-que-lava.jpg", meta: { es: "Relatos, 2016", ca: "Relats, 2016", en: "Stories, 2016" },
       blurb: {
         es: "Relatos donde conviven la vulnerabilidad y la violencia, sello de la narrativa del autor.",
         ca: "Relats on conviuen la vulnerabilitat i la violència, segell de la narrativa de l'autor.",
@@ -209,7 +205,7 @@ window.SITE_CONTENT = {
       }
     },
     {
-      ph: "book-4", title: "El último día de mi reinado", meta: { es: "Relatos · Sudaquia, 2013", ca: "Relats · Sudaquia, 2013", en: "Stories · Sudaquia, 2013" },
+      ph: "book-4", title: "El último día de mi reinado", cover: "assets/img/el-ultimo-dia-de-mi-reinado.jpg", meta: { es: "Relatos · Sudaquia, 2013", ca: "Relats · Sudaquia, 2013", en: "Stories · Sudaquia, 2013" },
       blurb: {
         es: "Su primer libro de cuentos, donde ya asoman las tensiones entre vulnerabilidad y poder que marcarán su obra.",
         ca: "El seu primer llibre de contes, on ja apunten les tensions entre vulnerabilitat i poder que marcaran la seva obra.",

@@ -74,7 +74,7 @@
       meta.appendChild(el("span", "outlet", a.outlet));
       body.appendChild(meta);
       body.appendChild(el("h3", "card-title", t(a.title)));
-      body.appendChild(el("p", "card-excerpt", t(a.excerpt)));
+      if (a.excerpt) body.appendChild(el("p", "card-excerpt", t(a.excerpt)));
       var readLbl = { es: "Leer", ca: "Llegir", en: "Read" };
       body.appendChild(el("span", "card-link", (readLbl[state.lang] || readLbl.es) + " →"));
       card.appendChild(body);
@@ -88,9 +88,23 @@
     var coverLbl = { es: "Portada", ca: "Coberta", en: "Cover" };
     C.books.forEach(function (b) {
       var card = el("article", "card card-book");
-      var ph = placeholder(b.ph, coverLbl[state.lang] || coverLbl.es);
-      ph.classList.add("book-cover");
-      card.appendChild(ph);
+      if (b.cover) {
+        var img = document.createElement("img");
+        img.className = "book-cover";
+        img.src = b.cover;
+        img.alt = b.title;
+        img.loading = "lazy";
+        img.onerror = function () {
+          var ph = placeholder(b.ph, coverLbl[state.lang] || coverLbl.es);
+          ph.classList.add("book-cover");
+          if (img.parentNode) img.parentNode.replaceChild(ph, img);
+        };
+        card.appendChild(img);
+      } else {
+        var ph0 = placeholder(b.ph, coverLbl[state.lang] || coverLbl.es);
+        ph0.classList.add("book-cover");
+        card.appendChild(ph0);
+      }
       var body = el("div", "card-body");
       body.appendChild(el("h3", "card-title", b.title));
       body.appendChild(el("p", "card-meta-line", t(b.meta)));
