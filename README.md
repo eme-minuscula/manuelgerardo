@@ -3,10 +3,10 @@
 A fast, fully responsive **one-page** site for Manuel Gerardo Sánchez —
 gastronomy journalist, author and PR for restaurants & food brands.
 
-- **Bilingual** ES / EN (toggle, bottom-right). Remembers your choice.
-- **Two live style proposals** to compare (toggle, bottom-right):
-  - **Editorial** — minimalist, magazine feel (Space Grotesk + Inter).
-  - **Literary** — elegant, book-like (Playfair Display + EB Garamond).
+- **Trilingual** ES / CA / EN. Defaults to the visitor's browser language;
+  picker in the footer remembers a manual choice.
+- **One style** — "Literary Gold": elegant, book-like, bold-but-posh
+  (Playfair Display + EB Garamond, gold accents, dark closing bands).
 - No build step, no framework, no cost: plain **HTML + CSS + JS**.
 
 ## Preview locally
@@ -52,25 +52,28 @@ Until then, the email link works fine.
 
 ## ⚠️ Content & assets still needed from Manuel
 
-Everything below is currently **Lorem Ipsum / placeholder** and should be replaced.
-Real, verified facts (bio, book list, awards, outlets) are already filled in.
+Real text is filled in where it could be sourced (bio, the four books + synopses,
+awards, the verified *The Objective* article, LinkedIn/Facebook). The items below
+still need him.
 
-### Images (all are placeholders right now)
+### Images — ALL are placeholders (and must be supplied)
+The build environment can't reach his sites to pull images, so nothing was
+imported. Provide the actual files (drop them in `assets/img/` and we wire them
+up) **or** paste public image URLs and we'll link them:
 - [ ] **Portrait** — hero photo (vertical, ~4:5) and an About photo.
-- [ ] **Article thumbnails** — 1 image per journalism piece (~3:2).
 - [ ] **Book covers** — cover image for each of the 4 books (~2:3).
-- [ ] **Client / publication logos** — optional, if we want real logos instead of text.
+- [ ] **Article thumbnails** — 1 image per journalism piece (~3:2).
+- [ ] **Client / publication logos** — optional, if we want logos instead of text.
 
 ### Text & data
-- [ ] **Hero headline & intro** — confirm or rewrite the tagline (ES + EN).
-- [ ] **Journalism** — real article titles, outlets, 1–2 line summaries, and **links** (replace the 6 placeholder cards).
-- [ ] **PR / Services** — confirm the 4 service areas and their descriptions; add packages/pricing if wanted.
-- [ ] **Clients** — list of restaurants / brands he's worked with (names + permission to show).
-- [ ] **Testimonials** — 2–3 real quotes with name + business.
-- [ ] **About** — review the bio; add anything missing (current roles, what he's working on now).
-- [ ] **Contact** — confirm the real email and social handles (Instagram / LinkedIn / X).
+- [ ] **Journalism** — the real card #1 (*The Objective*) is in; replace the 3
+      `[Ejemplo]/[Sample]` cards with his chosen pieces (title, outlet, summary, **link**).
+- [ ] **Clients** — restaurants / brands he's worked with (names + permission).
+- [ ] **Testimonials** — 2–3 real quotes with name + business (currently placeholder).
+- [ ] **Services** — confirm the 4 areas / wording; add packages or pricing if wanted.
+- [ ] **Contact** — confirm the email (`hola@…` is a guess) and the **Instagram** handle.
+- [ ] **Book years** — confirm *Sangre que lava* (2016?) and *El último día de mi reinado* (2013/2014?).
 
 ### Decisions to confirm
-- [ ] Which **style proposal** he prefers (Editorial vs Literary) — then we drop the other.
-- [ ] Whether to keep the bilingual toggle or launch in one language first.
 - [ ] Domain: confirm we're reusing `manuelgerardosanchez.com`.
+- [ ] Default language behaviour (browser-detect) and the ES/CA/EN set are as requested.

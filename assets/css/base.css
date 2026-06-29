@@ -175,6 +175,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
 .book-cover { aspect-ratio: 2 / 3; border-radius: var(--card-radius); box-shadow: 0 14px 32px rgba(40,30,10,.20); transition: box-shadow .2s; }
 .card-book:hover .book-cover { box-shadow: 0 20px 42px rgba(40,30,10,.30); }
 .card-meta-line { font-size: .92rem; color: var(--color-muted); font-style: italic; margin: 8px 0 0; }
+.card-blurb { font-size: .96rem; color: var(--color-muted); margin: 10px 0 0; line-height: 1.5; }
 
 /* Services — the lead section, give it presence */
 .card-service { padding: 32px 30px; background: var(--color-card); position: relative; }

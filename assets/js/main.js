@@ -5,9 +5,11 @@
   // Default language follows the browser; a stored choice (footer picker) wins.
   function detectLang() {
     var stored = localStorage.getItem("mgs-lang");
-    if (stored === "es" || stored === "en") return stored;
+    if (stored === "es" || stored === "ca" || stored === "en") return stored;
     var nav = (navigator.language || navigator.userLanguage || "es").toLowerCase();
-    return nav.indexOf("es") === 0 ? "es" : "en";
+    if (nav.indexOf("ca") === 0) return "ca";
+    if (nav.indexOf("es") === 0) return "es";
+    return "en";
   }
 
   var state = { lang: detectLang() };
@@ -58,10 +60,12 @@
   function renderArticles() {
     var wrap = document.getElementById("articles");
     wrap.innerHTML = "";
+    var imgLabel = { es: "Imagen del artículo", ca: "Imatge de l'article", en: "Article image" };
     C.articles.forEach(function (a) {
       var card = el("a", "card card-article");
       card.href = a.href || "#";
-      var ph = placeholder(a.ph, state.lang === "es" ? "Imagen del artículo" : "Article image");
+      if (/^https?:/.test(a.href || "")) { card.target = "_blank"; card.rel = "noopener"; }
+      var ph = placeholder(a.ph, imgLabel[state.lang] || imgLabel.es);
       ph.classList.add("card-media");
       card.appendChild(ph);
       var body = el("div", "card-body");
@@ -71,7 +75,8 @@
       body.appendChild(meta);
       body.appendChild(el("h3", "card-title", t(a.title)));
       body.appendChild(el("p", "card-excerpt", t(a.excerpt)));
-      body.appendChild(el("span", "card-link", (state.lang === "es" ? "Leer" : "Read") + " →"));
+      var readLbl = { es: "Leer", ca: "Llegir", en: "Read" };
+      body.appendChild(el("span", "card-link", (readLbl[state.lang] || readLbl.es) + " →"));
       card.appendChild(body);
       wrap.appendChild(card);
     });
@@ -80,14 +85,16 @@
   function renderBooks() {
     var wrap = document.getElementById("books-list");
     wrap.innerHTML = "";
+    var coverLbl = { es: "Portada", ca: "Coberta", en: "Cover" };
     C.books.forEach(function (b) {
       var card = el("article", "card card-book");
-      var ph = placeholder(b.ph, state.lang === "es" ? "Portada" : "Cover");
+      var ph = placeholder(b.ph, coverLbl[state.lang] || coverLbl.es);
       ph.classList.add("book-cover");
       card.appendChild(ph);
       var body = el("div", "card-body");
       body.appendChild(el("h3", "card-title", b.title));
       body.appendChild(el("p", "card-meta-line", t(b.meta)));
+      if (b.blurb) body.appendChild(el("p", "card-blurb", t(b.blurb)));
       card.appendChild(body);
       wrap.appendChild(card);
     });
