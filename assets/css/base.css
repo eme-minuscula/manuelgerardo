@@ -99,6 +99,9 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; }
 .hero-portrait {
   aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--media-radius);
   position: relative;
   box-shadow: 14px 14px 0 0 var(--color-gold);
@@ -158,7 +161,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
 
 .card { background: var(--color-card); border: 1px solid var(--color-line); border-radius: var(--card-radius); overflow: hidden; transition: transform .2s ease, box-shadow .2s ease, border-color .2s; }
 .card-article:hover, .card-book:hover { transform: translateY(-5px); box-shadow: 0 18px 40px rgba(40,30,10,.14); border-color: var(--color-gold); }
-.card-media { aspect-ratio: 3 / 2; }
+.card-media { aspect-ratio: 3 / 2; width: 100%; object-fit: cover; }
 .card-body { padding: 22px 24px 26px; }
 .card-meta { display: flex; gap: 12px; align-items: center; margin-bottom: 13px; }
 .tag { font-size: 12px; color: var(--color-on-accent); background: var(--color-accent); padding: 3px 11px; }
@@ -193,7 +196,7 @@ h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: var(--dis
 
 /* ---------- About ---------- */
 .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(30px, 5vw, 68px); align-items: start; }
-.about-portrait { aspect-ratio: 4 / 5; border-radius: var(--media-radius); position: sticky; top: calc(var(--header-h) + 24px); box-shadow: -14px 14px 0 0 var(--color-gold); }
+.about-portrait { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; object-position: center; border-radius: var(--media-radius); position: sticky; top: calc(var(--header-h) + 24px); box-shadow: -14px 14px 0 0 var(--color-gold); }
 .about-text p { margin: 0 0 18px; font-size: 1.12rem; }
 .awards { margin-top: 32px; }
 .awards h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .12em; margin-bottom: 14px; color: var(--color-gold); }

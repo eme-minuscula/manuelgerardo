@@ -57,9 +57,10 @@ awards, the verified *The Objective* article, LinkedIn/Facebook). The items belo
 still need him.
 
 ### Images
-- [x] **Book covers** — all 4 added in `assets/img/` and wired up.
-- [ ] **Portrait** — hero photo (vertical, ~4:5) and an About photo (still placeholder).
-- [ ] **Article thumbnails** — 1 image per journalism piece (~3:2), still placeholder.
+- [x] **Book covers** — all 4 added and wired up.
+- [x] **Portraits** — hero + About photos added.
+- [x] **Article photos** — 3 added (Isadora / Cienciaficción / Sade).
+- [ ] **Article thumbnails** — the other 3 journalism cards (currently fillers) need images.
 - [ ] **Client / publication logos** — optional, if we want logos instead of text.
 
 To add the remaining images: drop the files in `assets/img/` and tell me, or

@@ -136,9 +136,29 @@ window.SITE_CONTENT = {
   // Real, published pieces: one gastronomy feature (The Objective) plus five
   // columns from his Zenda author page. Article thumbnails are still
   // placeholders until Manuel sends images.
+  // 1–3: curated by Manuel (with photos). 4–6: real pieces as temporary
+  // fillers until he sends the other three.
   articles: [
     {
-      ph: "article-1", tag: { es: "Gastronomía", ca: "Gastronomia", en: "Food" }, outlet: "The Objective",
+      ph: "article-1", img: "assets/img/article-isadora.jpg",
+      tag: { es: "Perfil", ca: "Perfil", en: "Profile" }, outlet: "The Objective",
+      title: { es: "Isadora de Zubillaga: la embajada de la prudencia", ca: "Isadora de Zubillaga: la embajada de la prudencia", en: "Isadora de Zubillaga: la embajada de la prudencia" },
+      href: "https://theobjective.com/further/espana/2019-05-20/isadora-de-zubillaga-la-embajada-de-la-prudencia/"
+    },
+    {
+      ph: "article-2", img: "assets/img/article-cienciaficcion.webp",
+      tag: { es: "Ensayo", ca: "Assaig", en: "Essay" }, outlet: "Blog",
+      title: { es: "Cienciaficción", ca: "Cienciaficción", en: "Cienciaficción" },
+      href: "https://manuelgerardosanchez.com/2024/05/11/cienciaficcion/"
+    },
+    {
+      ph: "article-3", img: "assets/img/article-sade.jpg",
+      tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      title: { es: "Sade y la primera orgía", ca: "Sade y la primera orgía", en: "Sade y la primera orgía" },
+      href: "https://www.zendalibros.com/sade-y-la-primera-orgia/"
+    },
+    {
+      ph: "article-4", tag: { es: "Gastronomía", ca: "Gastronomia", en: "Food" }, outlet: "The Objective",
       title: {
         es: "Tribulaciones de un gourmet español en China",
         ca: "Tribulacions d'un gourmet espanyol a la Xina",
@@ -152,29 +172,14 @@ window.SITE_CONTENT = {
       href: "https://theobjective.com/gastronomia/2024-09-29/tribulaciones-de-un-gourmet-espanol-en-china/"
     },
     {
-      ph: "article-2", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      ph: "article-5", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
       title: { es: "El llamado del diablo", ca: "El llamado del diablo", en: "El llamado del diablo" },
       href: "https://www.zendalibros.com/el-llamado-del-diablo/"
     },
     {
-      ph: "article-3", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
+      ph: "article-6", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
       title: { es: "Matar a los hijos", ca: "Matar a los hijos", en: "Matar a los hijos" },
       href: "https://www.zendalibros.com/matar-a-los-hijos/"
-    },
-    {
-      ph: "article-4", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "Homofobia, hasta después de la muerte", ca: "Homofobia, hasta después de la muerte", en: "Homofobia, hasta después de la muerte" },
-      href: "https://www.zendalibros.com/homofobia-hasta-despues-de-la-muerte/"
-    },
-    {
-      ph: "article-5", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "Sade y la primera orgía", ca: "Sade y la primera orgía", en: "Sade y la primera orgía" },
-      href: "https://www.zendalibros.com/sade-y-la-primera-orgia/"
-    },
-    {
-      ph: "article-6", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "Cuando violan a un hombre", ca: "Cuando violan a un hombre", en: "Cuando violan a un hombre" },
-      href: "https://www.zendalibros.com/cuando-violan-a-un-hombre/"
     }
   ],
 

@@ -65,9 +65,23 @@
       var card = el("a", "card card-article");
       card.href = a.href || "#";
       if (/^https?:/.test(a.href || "")) { card.target = "_blank"; card.rel = "noopener"; }
-      var ph = placeholder(a.ph, imgLabel[state.lang] || imgLabel.es);
-      ph.classList.add("card-media");
-      card.appendChild(ph);
+      if (a.img) {
+        var im = document.createElement("img");
+        im.className = "card-media";
+        im.src = a.img;
+        im.alt = t(a.title);
+        im.loading = "lazy";
+        im.onerror = function () {
+          var p2 = placeholder(a.ph, imgLabel[state.lang] || imgLabel.es);
+          p2.classList.add("card-media");
+          if (im.parentNode) im.parentNode.replaceChild(p2, im);
+        };
+        card.appendChild(im);
+      } else {
+        var ph = placeholder(a.ph, imgLabel[state.lang] || imgLabel.es);
+        ph.classList.add("card-media");
+        card.appendChild(ph);
+      }
       var body = el("div", "card-body");
       var meta = el("div", "card-meta");
       meta.appendChild(el("span", "tag", t(a.tag)));
