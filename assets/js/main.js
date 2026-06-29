@@ -5,11 +5,9 @@
   // Default language follows the browser; a stored choice (footer picker) wins.
   function detectLang() {
     var stored = localStorage.getItem("mgs-lang");
-    if (stored === "es" || stored === "ca" || stored === "en") return stored;
+    if (stored === "es" || stored === "ca") return stored;
     var nav = (navigator.language || navigator.userLanguage || "es").toLowerCase();
-    if (nav.indexOf("ca") === 0) return "ca";
-    if (nav.indexOf("es") === 0) return "es";
-    return "en";
+    return nav.indexOf("ca") === 0 ? "ca" : "es";
   }
 
   var state = { lang: detectLang() };
@@ -43,9 +41,9 @@
     });
     html.setAttribute("lang", state.lang);
     document.title =
-      state.lang === "es"
-        ? "Manuel Gerardo Sánchez — PR gastronómico · Periodista · Escritor"
-        : "Manuel Gerardo Sánchez — Food PR · Journalist · Author";
+      state.lang === "ca"
+        ? "Manuel Gerardo Sánchez — PR gastronòmic · Periodista · Escriptor"
+        : "Manuel Gerardo Sánchez — PR gastronómico · Periodista · Escritor";
   }
 
   /* ---------- Dynamic sections ---------- */
@@ -60,7 +58,7 @@
   function renderArticles() {
     var wrap = document.getElementById("articles");
     wrap.innerHTML = "";
-    var imgLabel = { es: "Imagen del artículo", ca: "Imatge de l'article", en: "Article image" };
+    var imgLabel = { es: "Imagen del artículo", ca: "Imatge de l'article" };
     C.articles.forEach(function (a) {
       var card = el("a", "card card-article");
       card.href = a.href || "#";
@@ -89,7 +87,7 @@
       body.appendChild(meta);
       body.appendChild(el("h3", "card-title", t(a.title)));
       if (a.excerpt) body.appendChild(el("p", "card-excerpt", t(a.excerpt)));
-      var readLbl = { es: "Leer", ca: "Llegir", en: "Read" };
+      var readLbl = { es: "Leer", ca: "Llegir" };
       body.appendChild(el("span", "card-link", (readLbl[state.lang] || readLbl.es) + " →"));
       card.appendChild(body);
       wrap.appendChild(card);
@@ -99,7 +97,7 @@
   function renderBooks() {
     var wrap = document.getElementById("books-list");
     wrap.innerHTML = "";
-    var coverLbl = { es: "Portada", ca: "Coberta", en: "Cover" };
+    var coverLbl = { es: "Portada", ca: "Coberta" };
     C.books.forEach(function (b) {
       var card = el("article", "card card-book");
       if (b.cover) {

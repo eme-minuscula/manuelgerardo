@@ -88,47 +88,6 @@ window.SITE_CONTENT = {
     "footer.meta": "© 2026 Manuel Gerardo Sánchez · Barcelona"
   },
 
-  en: {
-    "nav.services": "PR & Brands",
-    "nav.journalism": "Journalism",
-    "nav.books": "Books",
-    "nav.about": "About",
-    "nav.contact": "Contact",
-
-    "hero.eyebrow": "Food PR · Journalist · Author",
-    "hero.title": "I tell the story of food — from the long read to the brand.",
-    "hero.lede": "Communications for restaurants and food brands, with a journalist's eye and an author's voice. Based in Barcelona.",
-    "hero.ctaPrimary": "Let's work together",
-    "hero.ctaSecondary": "See my journalism",
-
-    "strip.label": "My work has appeared in",
-
-    "services.kicker": "PR & Brands",
-    "services.title": "Communications for restaurants & gastronomy",
-    "services.intro": "I help restaurants, wineries and food brands define their story and take it to the media: strategy, content and press relations.",
-
-    "journalism.kicker": "Journalism",
-    "journalism.title": "Features, criticism and reporting",
-    "journalism.intro": "A selection of pieces on food, culture and literature — and the people who move them.",
-
-    "books.kicker": "Books",
-    "books.title": "Literary work",
-    "books.intro": "Fiction published in Spain and Latin America — stories that explore vulnerability, desire and power.",
-
-    "about.kicker": "About",
-    "about.title": "Manuel Gerardo Sánchez",
-    "about.awardsTitle": "Awards & recognition",
-
-    "testimonials.kicker": "Testimonials",
-    "testimonials.title": "What people say about my work",
-
-    "contact.kicker": "Contact",
-    "contact.title": "Let's talk about your project",
-    "contact.intro": "A story to tell, a restaurant to launch, or an editorial collaboration? Get in touch.",
-
-    "footer.meta": "© 2026 Manuel Gerardo Sánchez · Barcelona"
-  },
-
   /* ---------- Repeating data blocks ---------- */
 
   publications: ["Cocina y Vino", "Exceso", "Complot", "El Estímulo", "Clímax", "The Objective", "Zenda"],
@@ -136,50 +95,50 @@ window.SITE_CONTENT = {
   // Real, published pieces: one gastronomy feature (The Objective) plus five
   // columns from his Zenda author page. Article thumbnails are still
   // placeholders until Manuel sends images.
-  // 1–3: curated by Manuel (with photos). 4–6: real pieces as temporary
-  // fillers until he sends the other three.
+  // Six curated pieces, each with photo + short teaser. (Teasers are editorial
+  // summaries to confirm with Manuel.)
   articles: [
     {
       ph: "article-1", img: "assets/img/article-isadora.jpg",
-      tag: { es: "Perfil", ca: "Perfil", en: "Profile" }, outlet: "The Objective",
-      title: { es: "Isadora de Zubillaga: la embajada de la prudencia", ca: "Isadora de Zubillaga: la embajada de la prudencia", en: "Isadora de Zubillaga: la embajada de la prudencia" },
+      tag: { es: "Perfil", ca: "Perfil" }, outlet: "The Objective",
+      title: { es: "Isadora de Zubillaga: la embajada de la prudencia", ca: "Isadora de Zubillaga: la embajada de la prudencia" },
+      excerpt: { es: "Un perfil a fondo: la persona detrás del cargo.", ca: "Un perfil a fons: la persona darrere del càrrec." },
       href: "https://theobjective.com/further/espana/2019-05-20/isadora-de-zubillaga-la-embajada-de-la-prudencia/"
     },
     {
       ph: "article-2", img: "assets/img/article-cienciaficcion.webp",
-      tag: { es: "Ensayo", ca: "Assaig", en: "Essay" }, outlet: "Blog",
-      title: { es: "Cienciaficción", ca: "Cienciaficción", en: "Cienciaficción" },
+      tag: { es: "Ensayo", ca: "Assaig" }, outlet: "Blog",
+      title: { es: "Cienciaficción", ca: "Cienciaficció" },
+      excerpt: { es: "Un ensayo sobre el futuro que imaginamos y lo que dice de nosotros.", ca: "Un assaig sobre el futur que imaginem i el que diu de nosaltres." },
       href: "https://manuelgerardosanchez.com/2024/05/11/cienciaficcion/"
     },
     {
       ph: "article-3", img: "assets/img/article-sade.jpg",
-      tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "Sade y la primera orgía", ca: "Sade y la primera orgía", en: "Sade y la primera orgía" },
+      tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
+      title: { es: "Sade y la primera orgía", ca: "Sade y la primera orgía" },
+      excerpt: { es: "El marqués, el deseo y los límites: una lectura de Sade.", ca: "El marquès, el desig i els límits: una lectura de Sade." },
       href: "https://www.zendalibros.com/sade-y-la-primera-orgia/"
     },
     {
-      ph: "article-4", tag: { es: "Gastronomía", ca: "Gastronomia", en: "Food" }, outlet: "The Objective",
-      title: {
-        es: "Tribulaciones de un gourmet español en China",
-        ca: "Tribulacions d'un gourmet espanyol a la Xina",
-        en: "Tribulations of a Spanish gourmet in China"
-      },
-      excerpt: {
-        es: "Crónica gastronómica sobre el choque —y el placer— de comer lejos de casa.",
-        ca: "Crònica gastronòmica sobre el xoc —i el plaer— de menjar lluny de casa.",
-        en: "A food feature on the clash — and the pleasure — of eating far from home."
-      },
-      href: "https://theobjective.com/gastronomia/2024-09-29/tribulaciones-de-un-gourmet-espanol-en-china/"
+      ph: "article-4", img: "assets/img/article-yasmina.png",
+      tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
+      title: { es: "Yasmina Reza sabe de hombres", ca: "Yasmina Reza sabe de hombres" },
+      excerpt: { es: "La dramaturga que disecciona, con humor afilado, el ego masculino.", ca: "La dramaturga que dissecciona, amb humor afilat, l'ego masculí." },
+      href: "https://www.zendalibros.com/yasmina-reza-sabe-de-hombres/"
     },
     {
-      ph: "article-5", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "El llamado del diablo", ca: "El llamado del diablo", en: "El llamado del diablo" },
+      ph: "article-5", img: "assets/img/article-llamado.png",
+      tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
+      title: { es: "El llamado del diablo", ca: "El llamado del diablo" },
+      excerpt: { es: "Una indagación sobre la vieja fascinación por el mal.", ca: "Una indagació sobre la vella fascinació pel mal." },
       href: "https://www.zendalibros.com/el-llamado-del-diablo/"
     },
     {
-      ph: "article-6", tag: { es: "Columna", ca: "Columna", en: "Column" }, outlet: "Zenda",
-      title: { es: "Matar a los hijos", ca: "Matar a los hijos", en: "Matar a los hijos" },
-      href: "https://www.zendalibros.com/matar-a-los-hijos/"
+      ph: "article-6", img: "assets/img/article-homofobia.png",
+      tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
+      title: { es: "Homofobia, hasta después de la muerte", ca: "Homofòbia, fins després de la mort" },
+      excerpt: { es: "Sobre un estigma que persiste más allá de la vida.", ca: "Sobre un estigma que persisteix més enllà de la vida." },
+      href: "https://www.zendalibros.com/homofobia-hasta-despues-de-la-muerte/"
     }
   ],
 
@@ -266,11 +225,6 @@ window.SITE_CONTENT = {
       "Manuel Gerardo Sánchez (Caracas, 1982) és escriptor, periodista i historiador establert a Barcelona. Es va formar com a historiador a la Universitat Central de Veneçuela i va cursar un màster en Literatura Comparada i Estudis Culturals a la Universitat Autònoma de Barcelona.",
       "Durant vuit anys va dirigir la revista d'investigació Clímax i avui és editor associat d'El Estímulo. Col·labora amb The Objective i Zenda, i ha signat cròniques, reportatges, entrevistes i perfils —també gastronòmics— a Exceso, Cocina y Vino i Complot, entre d'altres.",
       "És autor d'En verano duele más (Egales, 2023), El revuelo de los insectos (Egales, 2020), Sangre que lava i El último día de mi reinado (Sudaquia)."
-    ],
-    en: [
-      "Manuel Gerardo Sánchez (Caracas, 1982) is a writer, journalist and historian based in Barcelona. He trained as a historian at the Central University of Venezuela and holds a master's in Comparative Literature and Cultural Studies from the Autonomous University of Barcelona.",
-      "For eight years he edited the investigative magazine Clímax and today he is associate editor of El Estímulo. He contributes to The Objective and Zenda, and has written features, reporting, interviews and profiles — food writing among them — for Exceso, Cocina y Vino and Complot, among others.",
-      "He is the author of En verano duele más (Egales, 2023), El revuelo de los insectos (Egales, 2020), Sangre que lava and El último día de mi reinado (Sudaquia)."
     ]
   },
 
