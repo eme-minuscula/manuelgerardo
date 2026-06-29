@@ -16,11 +16,11 @@ window.SITE_CONTENT = {
     "nav.about": "Sobre mí",
     "nav.contact": "Contacto",
 
-    "hero.eyebrow": "Periodista gastronómico · Escritor · PR",
+    "hero.eyebrow": "PR gastronómico · Periodista · Escritor",
     "hero.title": "Cuento la gastronomía: de la crónica al relato de marca.",
-    "hero.lede": "Periodista y escritor afincado en Barcelona. Escribo sobre cocina, cultura y las historias que hay detrás de cada plato, y ayudo a restaurantes y marcas a contar las suyas.",
-    "hero.ctaPrimary": "Ver mi periodismo",
-    "hero.ctaSecondary": "Trabajemos juntos",
+    "hero.lede": "Comunicación para restaurantes y marcas de gastronomía, con la mirada de un periodista y la voz de un escritor. Afincado en Barcelona.",
+    "hero.ctaPrimary": "Trabajemos juntos",
+    "hero.ctaSecondary": "Ver mi periodismo",
 
     "strip.label": "Mi trabajo ha aparecido en",
 
@@ -65,11 +65,11 @@ window.SITE_CONTENT = {
     "nav.about": "About",
     "nav.contact": "Contact",
 
-    "hero.eyebrow": "Gastronomy journalist · Author · PR",
+    "hero.eyebrow": "Food PR · Journalist · Author",
     "hero.title": "I tell the story of food — from the long read to the brand.",
-    "hero.lede": "A journalist and author based in Barcelona. I write about cooking, culture and the stories behind every dish, and I help restaurants and brands tell their own.",
-    "hero.ctaPrimary": "See my journalism",
-    "hero.ctaSecondary": "Let's work together",
+    "hero.lede": "Communications for restaurants and food brands, with a journalist's eye and an author's voice. Based in Barcelona.",
+    "hero.ctaPrimary": "Let's work together",
+    "hero.ctaSecondary": "See my journalism",
 
     "strip.label": "My work has appeared in",
 

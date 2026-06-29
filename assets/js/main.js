@@ -1,15 +1,19 @@
 (function () {
   "use strict";
   var C = window.SITE_CONTENT;
-  var state = {
-    lang: localStorage.getItem("mgs-lang") || "es",
-    theme: localStorage.getItem("mgs-theme") || "editorial"
-  };
 
+  // Default language follows the browser; a stored choice (footer picker) wins.
+  function detectLang() {
+    var stored = localStorage.getItem("mgs-lang");
+    if (stored === "es" || stored === "en") return stored;
+    var nav = (navigator.language || navigator.userLanguage || "es").toLowerCase();
+    return nav.indexOf("es") === 0 ? "es" : "en";
+  }
+
+  var state = { lang: detectLang() };
   var html = document.documentElement;
 
   function t(obj) {
-    // obj is { es, en } -> returns current language string
     return obj ? (obj[state.lang] != null ? obj[state.lang] : obj.es) : "";
   }
 
@@ -38,8 +42,8 @@
     html.setAttribute("lang", state.lang);
     document.title =
       state.lang === "es"
-        ? "Manuel Gerardo Sánchez — Periodista gastronómico · Escritor · PR"
-        : "Manuel Gerardo Sánchez — Gastronomy journalist · Author · PR";
+        ? "Manuel Gerardo Sánchez — PR gastronómico · Periodista · Escritor"
+        : "Manuel Gerardo Sánchez — Food PR · Journalist · Author";
   }
 
   /* ---------- Dynamic sections ---------- */
@@ -147,39 +151,27 @@
   function renderAll() {
     applyStrings();
     renderPublications();
+    renderServices();
     renderArticles();
     renderBooks();
-    renderServices();
     renderAbout();
     renderTestimonials();
     renderSocial();
   }
 
-  /* ---------- Toggles ---------- */
-  function setLang(lang) {
+  /* ---------- Language picker (footer) ---------- */
+  function setLang(lang, persist) {
     state.lang = lang;
-    localStorage.setItem("mgs-lang", lang);
+    if (persist) localStorage.setItem("mgs-lang", lang);
     document.querySelectorAll("[data-lang]").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
     });
     renderAll();
   }
 
-  function setTheme(theme) {
-    state.theme = theme;
-    localStorage.setItem("mgs-theme", theme);
-    html.setAttribute("data-theme", theme);
-    document.querySelectorAll("[data-theme-btn]").forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-theme-btn") === theme));
-    });
-  }
-
   function initControls() {
     document.querySelectorAll("[data-lang]").forEach(function (b) {
-      b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
-    });
-    document.querySelectorAll("[data-theme-btn]").forEach(function (b) {
-      b.addEventListener("click", function () { setTheme(b.getAttribute("data-theme-btn")); });
+      b.addEventListener("click", function () { setLang(b.getAttribute("data-lang"), true); });
     });
 
     // Mobile nav
@@ -207,7 +199,6 @@
   }
 
   /* ---------- Init ---------- */
-  setTheme(state.theme);
-  setLang(state.lang); // also triggers renderAll
+  setLang(state.lang, false); // renders everything; doesn't override stored pref
   initControls();
 })();

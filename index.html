@@ -1,33 +1,21 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="editorial">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manuel Gerardo Sánchez — Periodista gastronómico · Escritor · PR</title>
-  <meta name="description" content="Manuel Gerardo Sánchez — periodista gastronómico, escritor y PR. Crónica, crítica y comunicación para restaurantes y marcas del mundo de la gastronomía." />
+  <title>Manuel Gerardo Sánchez — PR gastronómico · Periodista · Escritor</title>
+  <meta name="description" content="Manuel Gerardo Sánchez — PR y comunicación para restaurantes y marcas de gastronomía, periodista gastronómico y escritor. Estrategia de relato, contenidos y prensa." />
   <meta property="og:title" content="Manuel Gerardo Sánchez" />
-  <meta property="og:description" content="Periodista gastronómico · Escritor · PR" />
+  <meta property="og:description" content="PR gastronómico · Periodista · Escritor" />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/base.css" />
   <link rel="stylesheet" href="assets/css/themes.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E%E2%9C%92%EF%B8%8F%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
-  <!-- Floating controls: language + style proposal switcher -->
-  <div class="controls" role="region" aria-label="Site preferences">
-    <div class="control-group" role="group" aria-label="Language">
-      <button class="ctrl" data-lang="es" aria-pressed="true">ES</button>
-      <button class="ctrl" data-lang="en" aria-pressed="false">EN</button>
-    </div>
-    <div class="control-group" role="group" aria-label="Style proposal">
-      <button class="ctrl" data-theme-btn="editorial" aria-pressed="true" data-i18n="ui.editorial">Editorial</button>
-      <button class="ctrl" data-theme-btn="literary" aria-pressed="false" data-i18n="ui.literary">Literario</button>
-    </div>
-  </div>
-
   <header class="site-header">
     <div class="wrap header-inner">
       <a href="#top" class="brand">
@@ -35,9 +23,9 @@
         <span class="brand-name">Manuel Gerardo Sánchez</span>
       </a>
       <nav class="nav" aria-label="Primary">
+        <a href="#services" data-i18n="nav.services">PR &amp; Marcas</a>
         <a href="#journalism" data-i18n="nav.journalism">Periodismo</a>
         <a href="#books" data-i18n="nav.books">Libros</a>
-        <a href="#services" data-i18n="nav.services">PR &amp; Marcas</a>
         <a href="#about" data-i18n="nav.about">Sobre mí</a>
         <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contacto</a>
       </nav>
@@ -55,8 +43,8 @@
         <h1 class="hero-title" data-i18n="hero.title"></h1>
         <p class="hero-lede" data-i18n="hero.lede"></p>
         <div class="hero-actions">
-          <a href="#journalism" class="btn btn-primary" data-i18n="hero.ctaPrimary"></a>
-          <a href="#contact" class="btn btn-ghost" data-i18n="hero.ctaSecondary"></a>
+          <a href="#services" class="btn btn-primary" data-i18n="hero.ctaPrimary"></a>
+          <a href="#journalism" class="btn btn-ghost" data-i18n="hero.ctaSecondary"></a>
         </div>
       </div>
       <div class="hero-portrait placeholder" data-ph="portrait" aria-hidden="true"></div>
@@ -70,8 +58,21 @@
       </div>
     </section>
 
-    <!-- JOURNALISM (lead section) -->
-    <section id="journalism" class="section">
+    <!-- SERVICES (PR & Marcas) — lead section -->
+    <section id="services" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker" data-i18n="services.kicker"></p>
+          <h2 class="section-title" data-i18n="services.title"></h2>
+          <p class="section-intro" data-i18n="services.intro"></p>
+        </div>
+        <div class="cards cards-services" id="services-list"></div>
+        <ul class="client-logos" id="clients" aria-label="Selected clients"></ul>
+      </div>
+    </section>
+
+    <!-- JOURNALISM -->
+    <section id="journalism" class="section section-alt">
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker" data-i18n="journalism.kicker"></p>
@@ -83,7 +84,7 @@
     </section>
 
     <!-- BOOKS -->
-    <section id="books" class="section section-alt">
+    <section id="books" class="section">
       <div class="wrap">
         <div class="section-head">
           <p class="section-kicker" data-i18n="books.kicker"></p>
@@ -91,19 +92,6 @@
           <p class="section-intro" data-i18n="books.intro"></p>
         </div>
         <div class="cards cards-books" id="books-list"></div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker" data-i18n="services.kicker"></p>
-          <h2 class="section-title" data-i18n="services.title"></h2>
-          <p class="section-intro" data-i18n="services.intro"></p>
-        </div>
-        <div class="cards cards-services" id="services-list"></div>
-        <ul class="client-logos" id="clients" aria-label="Selected clients"></ul>
       </div>
     </section>
 
@@ -134,39 +122,26 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section-alt contact">
-      <div class="wrap contact-grid">
-        <div class="contact-body">
-          <p class="section-kicker" data-i18n="contact.kicker"></p>
-          <h2 class="section-title" data-i18n="contact.title"></h2>
-          <p class="section-intro" data-i18n="contact.intro"></p>
-          <a class="contact-email" id="contact-email" href="mailto:hola@manuelgerardosanchez.com">hola@manuelgerardosanchez.com</a>
-          <ul class="social" id="social"></ul>
-        </div>
-        <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
-          <label>
-            <span data-i18n="contact.formName"></span>
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            <span data-i18n="contact.formEmail"></span>
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            <span data-i18n="contact.formMessage"></span>
-            <textarea name="message" rows="4" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit"></button>
-          <p class="form-note" data-i18n="contact.formNote"></p>
-        </form>
+    <!-- CONTACT (dark closing band, no form) -->
+    <section id="contact" class="section section-ink contact">
+      <div class="wrap contact-inner">
+        <p class="section-kicker" data-i18n="contact.kicker"></p>
+        <h2 class="section-title" data-i18n="contact.title"></h2>
+        <p class="contact-intro" data-i18n="contact.intro"></p>
+        <a class="contact-email" id="contact-email" href="mailto:hola@manuelgerardosanchez.com">hola@manuelgerardosanchez.com</a>
+        <ul class="social" id="social"></ul>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer section-ink">
     <div class="wrap footer-inner">
       <span class="brand-name">Manuel Gerardo Sánchez</span>
+      <div class="footer-lang" role="group" aria-label="Language">
+        <button class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
+        <span class="lang-sep">/</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <span class="footer-meta" data-i18n="footer.meta"></span>
     </div>
   </footer>
