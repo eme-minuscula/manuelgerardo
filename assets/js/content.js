@@ -120,21 +120,21 @@ window.SITE_CONTENT = {
       href: "https://www.zendalibros.com/sade-y-la-primera-orgia/"
     },
     {
-      ph: "article-4", img: "assets/img/article-yasmina.png",
+      ph: "article-4", img: "assets/img/article-yasmina.jpg",
       tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
       title: { es: "Yasmina Reza sabe de hombres", ca: "Yasmina Reza sabe de hombres" },
       excerpt: { es: "La dramaturga que disecciona, con humor afilado, el ego masculino.", ca: "La dramaturga que dissecciona, amb humor afilat, l'ego masculí." },
       href: "https://www.zendalibros.com/yasmina-reza-sabe-de-hombres/"
     },
     {
-      ph: "article-5", img: "assets/img/article-llamado.png",
+      ph: "article-5", img: "assets/img/article-llamado.jpg",
       tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
       title: { es: "El llamado del diablo", ca: "El llamado del diablo" },
       excerpt: { es: "Una indagación sobre la vieja fascinación por el mal.", ca: "Una indagació sobre la vella fascinació pel mal." },
       href: "https://www.zendalibros.com/el-llamado-del-diablo/"
     },
     {
-      ph: "article-6", img: "assets/img/article-homofobia.png",
+      ph: "article-6", img: "assets/img/article-homofobia.jpg",
       tag: { es: "Columna", ca: "Columna" }, outlet: "Zenda",
       title: { es: "Homofobia, hasta después de la muerte", ca: "Homofòbia, fins després de la mort" },
       excerpt: { es: "Sobre un estigma que persiste más allá de la vida.", ca: "Sobre un estigma que persisteix més enllà de la vida." },
